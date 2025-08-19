@@ -1,0 +1,27 @@
+{
+  "name": "curso-cypress",
+  "version": "1.0.0",
+  "description": "Repositorio para el curso de Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabobregon89/curso-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabobregon89/curso-cypress/issues"
+  },
+  "homepage": "https://github.com/gabobregon89/curso-cypress#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^14.5.4"
+  }
+}
