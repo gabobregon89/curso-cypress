@@ -10,6 +10,6 @@ module.exports = defineConfig({
       }));
       return config;
     },
-    specPattern: "**/*.feature",
+    specPattern: "cypress/e2e/feature/*.feature",
   },
 });
