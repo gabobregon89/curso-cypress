@@ -1,8 +1,8 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 
 Given("ingreso en la pagina de prueba", function () {
+    // Se agrega linea para evitar error de cross-origin
     Cypress.on("uncaught:exception", (err, runnable) => {
-        // Podés filtrar por mensaje si querés ser más específico
         if (err.message.includes("Script error")) {
             return false; // evita que el test falle
         }
