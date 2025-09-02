@@ -1,4 +1,4 @@
-import { Given, When } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given("el usuario abre la web de automation exercise", function () {
     cy.visit("https://automationexercise.com/");
@@ -24,13 +24,15 @@ When("el usuario hace clic en en el boton view product", function () {
     cy.get('.choose > .nav > li > a').click();
 });
 
-Then("el sistema muestra la informacion de {string}", function (element) {
+Then("el sistema muestra la informacion del producto {string}", function (element) {
     cy.get('.product-information > h2').should('have.text', element);
 });
 
-When("el sistema muestra el mismo precio del producto que se obtuvo en la busqueda", function () {
-    cy.get('.product-information > span').then(function (element) {
+Then("el sistema muestra el mismo precio del producto que se obtuvo en la busqueda", function () {
+    cy.get(':nth-child(5) > span').then(function (element) {
         const textoPrecioDetalle = element.text();
+        cy.log(textoPrecioDetalle);
         expect(textoPrecioDetalle).to.equal(this.textoPrecio);
     });
 });
+

@@ -6,5 +6,5 @@ Feature: Busqueda de productos
         And el usuario realiza la busqueda del producto "Blue Top"
         And el usuario obtiene el precio del producto
         And el usuario hace clic en en el boton view product
-        Then el sistema muestra la informacion de "Blue Top"
+        Then el sistema muestra la informacion del producto "Blue Top"
         And el sistema muestra el mismo precio del producto que se obtuvo en la busqueda
